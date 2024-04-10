@@ -11,8 +11,29 @@ sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
 function sumArray(arr) {
-  // Your code here 
+  // let sum = 0;
+  
+  // base
+  if (arr.length === 0 ) return 0
+  
+  // create variable to keep track of first index
+  // then create a variable to store the rest of the array
+  let firstEl = arr[0]
+  let restOfArr = arr.slice(1)
+  
+  // sum += arr[arr.length - 1]
+  // arr.pop()
+
+  
+  // Recursive step: Add first index and return function
+  // with 
+  return firstEl + sumArray(restOfArr)
 }
+
+debugger
+console.log(sumArray([1, 2, 3])); //  6
+console.log(sumArray([0, 1, -3])); //  -2
+console.log(sumArray([1, 2, 3, 4, 5])); // 15
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
